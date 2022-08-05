@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<bean id="mps" class="mobile.sim">
+<property name="provider" value="jio"/>
+<property name="network" value="5g"/>
+</bean>
+<bean id="MPS" class="mobile.mobile">
+<property name="name" value="poco"/>
+<property name="model" value="f1"/>
+<property name="ram" value="6gb"/>
+<property name="price" value="21000"/>
+<property name="colour" value="roso red"/>
+<property name="sim" ref="mps"/>
+</bean>
+    
+
+</beans>
